@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "followUs": "Follow Us",
+    "company": "Al Huda Rubber Industry"
+  },
+  "hero": {
+    "title": {
+      "engineered": "Engineered",
+      "for": "For",
+      "excellence": "Excellence."
+    },
+    "description": [
+      "Premium rubber solutions installed with precision,",
+      "expertise, and exceptional craftsmanship."
+    ],
+    "secondaryDescription": [
+      "Serving Qatar with trusted rubber installation",
+      "excellence since 1984."
+    ]
+  },
+  "footer": {
+    "description": "Precision Rubber Solutions. Built for Performance. Trusted Across Qatar.",
+    "support": "support@alhudaqa.com",
+    "address": "P.O. Box 2141, Doha, Qatar",
+    "followUs": "Follow Us",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "allRightsReserved": "All rights reserved."
+  },
+  "about": {
+    "heading": [
+      "Al Huda Equipment Company",
+      "delivers premium rubber installation",
+      "solutions with unmatched craftsmanship,",
+      "trusted across Qatar."
+    ],
+    "label": "Trusted Across Qatar.",
+    "paragraph1": "Since 1989, Al Huda Rubber Industry has manufactured and installed high-quality rubber products across the State of Qatar.",
+    "paragraph2": "Built on integrity and craftsmanship, we deliver tailored rubber solutions that last.",
+    "learnMore": "Learn more"
+  },
+  "products": {
+    "targetSectors": "Target Sectors",
+    "explore": "Explore",
+    "items": {
+      "conveyorBelt": "Conveyor Belt",
+      "ballisticTiles": "Ballistic Tiles",
+      "horseFlooring": "Horse Flooring",
+      "floorTiles": "Floor Tiles",
+      "kidsTiles": "Kids Tiles",
+      "gymTiles": "Gym Tiles"
+    },
+    "rubberConveyorBelt": {
+      "title": "Rubber Conveyor Belt",
+      "images": {
+        "conveyorBelt": "Rubber Conveyor Belt",
+        "conveyorSystem": "Conveyor Belt System",
+        "conveyorRoll": "Rubber Conveyor Belt Roll",
+        "industrialSystem": "Industrial Conveyor Belt System"
+      }
+    },
+    "ballisticRubberTiles": {
+      "title": "Ballistic Rubber Tiles.",
+      "images": {
+        "ballisticTiles": "Ballistic Rubber Tiles"
+      }
+    },
+    "rubberFlooringHorse": {
+      "title": "Rubber Flooring for Horse.",
+      "images": {
+        "horseFlooring": "Rubber Flooring for Horse",
+        "horseFlooringAlt": "Rubber Horse Flooring"
+      }
+    },
+    "rubberFloorTiles": {
+      "title": "Rubber Floor Tiles.",
+      "images": {
+        "floorTiles": "Rubber Floor Tiles"
+      }
+    },
+    "rubberFloorTilesForKidsAndSchool": {
+      "title": "Rubber Floor Tiles for Kids & School.",
+      "images": {
+        "kidsTiles": "Rubber Floor Tiles for Kids",
+        "schoolTiles": "Rubber Floor Tiles for School"
+      }
+    },
+    "gym": {
+      "title": "Rubber Floor Tiles for Gym.",
+      "images": {
+        "gymFlooring": "Rubber Floor Tiles for Gym"
+      }
+    },
+    "outdoorSport": {
+      "title": "Outdoor Sports Track.",
+      "images": {
+        "sportsTrack": "Outdoor Sports Track"
+      }
+    },
+    "marine": {
+      "title": "Rubber Marine Accessories.",
+      "images": {
+        "marineAccessories": "Rubber Marine Accessories"
+      }
+    },
+    "parking": {
+      "title": "Rubber Parking Accessories.",
+      "images": {
+        "parkingAccessories": "Rubber Parking Accessories"
+      }
+    },
+    "printingPressRubberRolls": {
+      "title": "Printing Press Rubber Rolls.",
+      "images": {
+        "printingRolls": "Printing Press Rubber Rolls"
+      }
+    },
+    "industrialRubberRolls": {
+      "title": "Industrial Rubber Rolls.",
+      "images": {
+        "industrialRolls": "Industrial Rubber Rolls"
+      }
+    }
+  },
+  "company": {
+    "title": "Brands We Serve."
+  },
+  "principles": {
+    "intro": [
+      "For over three decades, Al Huda has",
+      "delivered high-quality rubber solutions",
+      "built for durability, precision, and reliability,",
+      "and performance."
+    ],
+    "title": [
+      "Why choose",
+      "Al Huda?"
+    ],
+    "reasons": [
+      {
+        "number": "(01)",
+        "title": "Experience",
+        "description": "Our experience since 1989 has shaped our understanding of rubber products, applications, and customer requirements."
+      },
+      {
+        "number": "(02)",
+        "title": "Industry Knowledge",
+        "description": "We keep up with industry advancements to provide solutions that meet changing technical and application needs."
+      },
+      {
+        "number": "(03)",
+        "title": "Rubber Expertise",
+        "description": "Our knowledge of rubber materials and products allows us to deliver solutions suited to different applications."
+      },
+      {
+        "number": "(04)",
+        "title": "Customization",
+        "description": "Our solutions can be customized according to the specific use, application, and requirements of our customers."
+      }
+    ],
+    "description": "With experience since 1989, we combine industry knowledge, rubber expertise, and customized solutions to meet the needs of different applications."
+  },
+  "getToKnowUs": {
+    "text": "Get to know us"
+  },
+  "contact": {
+    "intro": [
+      "From product enquiries to custom",
+      "rubber solutions, our team is here to help you find the solution to your requirements."
+    ],
+    "imageAlt": "Al Huda Rubber Industry",
+    "seeOurWork": "See our work"
+  },
+  "productHero": {
+  "title": [
+    "Engineered to Perform",
+    "Built for Industry."
+  ]
+}
+}
