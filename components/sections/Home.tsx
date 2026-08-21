@@ -2,7 +2,6 @@ import en from "@/locales/en.json";
 
 type HeroTranslations = typeof en.hero;
 
-
 export default function Home({
   translations,
 }: {
@@ -34,7 +33,6 @@ export default function Home({
 
       <div className="absolute inset-0 z-10">
         {/* Left Bottom Heading */}
-        {/* FIX: left-* -> start-*, so this sits on the correct side in RTL */}
         <div
           className="
             absolute
@@ -82,14 +80,13 @@ export default function Home({
           </h1>
         </div>
 
-        {/* Right Middle Description */}
-        {/* FIX: left-5/right-5/right-[...] -> start-5/end-5/end-[...] */}
+        {/* Right Middle Description - FIXED: moved up on smaller screens */}
         <div
           className="
             absolute
             start-5
             end-5
-            bottom-8
+            bottom-[clamp(5rem,12vw,8rem)]
             max-w-none
             md:start-auto
             md:end-[clamp(1rem,4vw,4rem)]
