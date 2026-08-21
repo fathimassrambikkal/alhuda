@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ArrowIcon } from "@/components/icons/Icons";
 import en from "@/locales/en.json";
+import type { Locale } from "@/i18n/config";
 
 type ProductsTranslations = typeof en.products;
 
@@ -19,8 +20,10 @@ const products = [
 
 export default function ProductsSection({
   translations,
+  locale,
 }: {
   translations: ProductsTranslations;
+  locale: Locale;
 }) {
   const router = useRouter();
   const sectionRef = useRef<HTMLElement>(null);
@@ -61,7 +64,7 @@ export default function ProductsSection({
 
         <button
           type="button"
-          onClick={() => router.push("/products")}
+          onClick={() => router.push(`/${locale}/products`)}
           className="group inline-flex items-center gap-2 text-white text-[clamp(0.9rem,1.2vw,1.25rem)] leading-[1.1] font-medium transition-opacity duration-300 hover:opacity-70"
         >
           <span>{translations.explore}</span>
@@ -84,7 +87,7 @@ export default function ProductsSection({
         {products.map((item, index) => (
           <div
             key={item.key}
-            onClick={() => router.push("/products")}
+            onClick={() => router.push(`/${locale}/products`)}
             className="group relative w-full cursor-pointer"
           >
             <div

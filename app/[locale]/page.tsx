@@ -19,9 +19,15 @@ export default async function Page({
     <main>
       <HomeSection translations={translations.hero} />
 
-      <AboutSection  translations={translations.about}/>
+      <AboutSection
+        translations={translations.about}
+        locale={locale}
+      />
 
-      <ProductsSection  translations={translations.products}/>
+     <ProductsSection
+  translations={translations.products}
+  locale={locale}
+/>
 
       <CompanySection translations={translations.company} />
     </main>
