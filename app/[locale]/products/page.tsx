@@ -235,12 +235,12 @@ export default async function ProductsPage({
           },
           {
             id: 2,
-            src: "/images/parking-2.jpg",
+            src: "/images/parking-2.webp",
             alt: translations.products.parking.images.parkingAccessories,
           },
           {
             id: 3,
-            src: "/images/parking-3.jpg",
+            src: "/images/parking-3.webp",
             alt: translations.products.parking.images.parkingAccessories,
           },
         ]}
