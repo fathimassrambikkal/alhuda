@@ -1,22 +1,5 @@
 "use client";
 
-/**
- * OPTIMIZATION NOTES
- * -------------------
- * - Dropped `gsap` + `gsap/ScrollTrigger`. The original scrub tween only
- *   did scale 1.04 -> 1 as each image entered the viewport — a one-shot
- *   reveal, not a true scrub that needs to track scroll position frame
- *   by frame. A single IntersectionObserver + a CSS `transition` on
- *   `transform` gives the same visual "settle into place" feel with far
- *   less JS (no 30-40kb GSAP/ScrollTrigger bundle, no per-frame RAF loop).
- * - Removing GSAP here (and from ProductImageSlider/About/Contact) lets
- *   you drop the gsap dependency from the app entirely if nothing else
- *   uses it — check your other routes before removing the package.
- * - IntersectionObserver only fires once per image (unobserve after
- *   trigger), matching the original one-way reveal, and this component
- *   stays lightweight since it doesn't need scroll position math.
- */
-
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
