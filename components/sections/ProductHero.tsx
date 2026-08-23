@@ -35,7 +35,7 @@ export default function ProductHero({
           <h1
             className="
               font-medium
-              leading-[0.9]
+              leading-[1.1]
               tracking-[-0.06em]
               text-white
             "

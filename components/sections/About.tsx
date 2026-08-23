@@ -60,7 +60,7 @@ export default function About({
             className="
               font-light
               tracking-[-0.065em]
-              leading-[0.94]
+              leading-[1.05]
               text-[clamp(2rem,6vw,6.2rem)]
             "
           >
