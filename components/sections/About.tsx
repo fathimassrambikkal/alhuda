@@ -6,16 +6,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowIcon } from "@/components/icons/Icons";
 import en from "@/locales/en.json";
+import type { Locale } from "@/i18n/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
 type AboutTranslations = typeof en.about;
 
+type AboutProps = {
+  translations: AboutTranslations;
+  locale: Locale;
+};
+
 export default function About({
   translations,
-}: {
-  translations: AboutTranslations;
-}) {
+  locale,
+}: AboutProps) {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -151,7 +156,7 @@ export default function About({
               {translations.paragraph2}
             </p>
             <Link
-              href="/about"
+              href={`/${locale}/about`}
               className="
                 group
                 inline-flex
