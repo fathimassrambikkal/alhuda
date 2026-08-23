@@ -54,6 +54,8 @@ export default function Navbar() {
 
   const toggle = () => setOpen((v) => !v);
 
+  const brandName = locale === "ar" ? "الهدى للمطاط" : "Alhuda for Rubber";
+
   return (
     <>
       <div
@@ -87,15 +89,15 @@ export default function Navbar() {
         {/* TOP BAR */}
         <div className="relative z-20 flex h-[82px] items-start justify-between px-[20px] pt-[16px] max-md:h-[68px] max-md:px-[13px] max-md:pt-[10px] max-sm:h-[60px] max-sm:px-[10px] max-sm:pt-[8px] max-[320px]:h-[52px] max-[320px]:px-[8px] max-[320px]:pt-[6px]">
           <div className="flex items-start gap-[20px] max-md:gap-[12px] max-sm:gap-[10px]">
-            <Link href={`/${locale}`} onClick={() => setOpen(false)} aria-label="Al Huda Rubber Industry" className="block shrink-0">
-              <Image
-                src="/images/logo.webp"
-                alt="Al Huda Rubber Industry"
-                width={85}
-                height={85}
-                priority
-                className="h-[66px] w-[66px] object-contain max-md:h-[54px] max-md:w-[54px] max-sm:h-[46px] max-sm:w-[46px] max-[320px]:h-[38px] max-[320px]:w-[38px]"
-              />
+            <Link href={`/${locale}`} onClick={() => setOpen(false)} aria-label={brandName} className="block shrink-0">
+          <Image
+  src="/images/logo.webp"
+  alt={brandName}
+  width={110}
+  height={110}
+  priority
+  className="h-[84px] w-[80px] object-contain max-md:h-[70px] max-md:w-[66px] max-sm:h-[62px] max-sm:w-[58px] max-[320px]:h-[52px] max-[320px]:w-[48px]"
+/>
             </Link>
             <span className="pt-[12px] text-[11px] font-medium uppercase tracking-[-0.02em] text-white/45 max-md:pt-[7px] max-md:text-[10px] max-sm:pt-[4px] max-sm:text-[9px] max-[320px]:pt-[2px] max-[320px]:text-[8px]">
               /{currentLabel}
@@ -138,9 +140,9 @@ export default function Navbar() {
 
         {/* COMPANY NAME */}
         <div className="absolute start-[106px] max-md:start-[78px] max-sm:start-[68px] max-[320px]:start-[58px] top-[84px] max-md:top-[72px] max-sm:top-[48px] max-[320px]:top-[58px]">
-          <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.05em] text-white max-md:text-[13px] max-sm:text-[12px] max-[320px]:text-[11px]">
+          {/* <span className="whitespace-nowrap text-[15px] font-medium tracking-[-0.05em] text-white max-md:text-[13px] max-sm:text-[12px] max-[320px]:text-[11px]">
             {t.nav.company}
-          </span>
+          </span> */}
         </div>
 
         {/* OPEN MENU */}

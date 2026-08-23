@@ -1,4 +1,4 @@
-import ContactPage from "@/components/sections/Contact";
+import ContactPage from "./Contact";
 import { getTranslations } from "@/i18n/getTranslations";
 import type { Locale } from "@/i18n/config";
 

@@ -7,7 +7,7 @@
     "menu": "Menu",
     "close": "Close",
     "followUs": "Follow Us",
-    "company": "Al Huda Rubber Industry"
+    "company": "Alhuda for Rubber"
   },
   "hero": {
     "title": {
@@ -21,7 +21,7 @@
     ],
     "secondaryDescription": [
       "Serving Qatar with trusted rubber installation",
-      "excellence since 1984."
+      "excellence since 1989."
     ]
   },
   "footer": {
@@ -36,13 +36,13 @@
   },
   "about": {
     "heading": [
-      "Al Huda Equipment Company",
+      "Alhuda for Rubber",
       "delivers premium rubber installation",
       "solutions with unmatched craftsmanship,",
       "trusted across Qatar."
     ],
-    "label": "Trusted Across Qatar.",
-    "paragraph1": "Since 1989, Al Huda Rubber Industry has manufactured and installed high-quality rubber products across the State of Qatar.",
+    "label": "Trusted across Qatar.",
+    "paragraph1": "Since 1989, Alhuda for Rubber has manufactured and installed high-quality rubber products across the State of Qatar.",
     "paragraph2": "Built on integrity and craftsmanship, we deliver tailored rubber solutions that last.",
     "learnMore": "Learn more"
   },
@@ -134,14 +134,14 @@
   },
   "principles": {
     "intro": [
-      "For over three decades, Al Huda has",
+      "For over three decades, Alhuda for Rubber has",
       "delivered high-quality rubber solutions",
       "built for durability, precision, and reliability,",
       "and performance."
     ],
     "title": [
       "Why choose",
-      "Al Huda?"
+      "Alhuda for Rubber?"
     ],
     "reasons": [
       {
@@ -175,13 +175,14 @@
       "From product enquiries to custom",
       "rubber solutions, our team is here to help you find the solution to your requirements."
     ],
-    "imageAlt": "Al Huda Rubber Industry",
-    "seeOurWork": "See our work"
+    "imageAlt": "Alhuda for Rubber",
+    "seeOurWork": "See our work",
+    "getInTouch": "Get in touch"
   },
   "productHero": {
-  "title": [
-    "Engineered to Perform",
-    "Built for Industry."
-  ]
-}
+    "title": [
+      "Engineered to Perform",
+      "Built for Industry."
+    ]
+  }
 }

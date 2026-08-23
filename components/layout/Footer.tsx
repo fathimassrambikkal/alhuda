@@ -38,18 +38,19 @@ export default function Footer({ locale }: FooterProps) {
         {/* Email */}
         <a
           href={`mailto:${t.footer.support}`}
-          className="
-            break-all
-            text-[clamp(1.25rem,4vw,2.5rem)]
-            font-medium
-            leading-none
-            tracking-[-0.03em]
-            text-white
-            transition-opacity
-            duration-300
-            hover:opacity-50
-            [direction:ltr]
-          "
+        className="
+  break-all
+  text-[clamp(1.1rem,3.4vw,2rem)]
+  font-medium
+  leading-none
+  tracking-[-0.03em]
+  text-white
+  transition-opacity
+  duration-300
+  hover:opacity-50
+  [direction:ltr]
+"
+          
         >
           {t.footer.support}
         </a>

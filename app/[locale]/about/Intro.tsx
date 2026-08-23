@@ -125,7 +125,8 @@ export default function IntroPrinciples({
               className="
                 font-light
                 tracking-[-0.065em]
-                leading-[0.94]
+                leading-[1.02]
+                min-[800px]:leading-[0.94]
                 text-[clamp(2rem,6vw,6.2rem)]
               "
             >
@@ -165,7 +166,8 @@ export default function IntroPrinciples({
                     sm:text-[26px]
                     md:text-[34px]
                     xl:text-[52px]
-                    leading-[0.95]
+                    leading-[1.05]
+                    min-[800px]:leading-[0.95]
                     tracking-[-0.04em]
                     font-light
                   "
@@ -196,7 +198,8 @@ export default function IntroPrinciples({
                           sm:text-[36px]
                           md:text-[48px]
                           xl:text-[64px]
-                          leading-none
+                          leading-[1.05]
+                          min-[800px]:leading-none
                           font-light
                         "
                       >
@@ -209,7 +212,8 @@ export default function IntroPrinciples({
                           sm:text-[36px]
                           md:text-[48px]
                           xl:text-[64px]
-                          leading-none
+                          leading-[1.05]
+                          min-[800px]:leading-none
                           tracking-[-0.05em]
                           font-light
                         "
@@ -230,7 +234,8 @@ export default function IntroPrinciples({
                       sm:text-[22px]
                       md:text-[30px]
                       xl:text-[50px]
-                      leading-[1.05]
+                      leading-[1.12]
+                      min-[800px]:leading-[1.05]
                       tracking-[-0.04em]
                       font-light
                     "

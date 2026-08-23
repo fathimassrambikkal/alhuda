@@ -22,12 +22,19 @@ export default function Home({
     >
       <video
         className="hero-video absolute inset-0 h-full w-full object-cover"
-        src="/images/hero.webm"
+        poster="/images/hero-poster.webp"
         autoPlay
         loop
         muted
         playsInline
-      />
+        preload="auto"
+        disablePictureInPicture
+        controls={false}
+        style={{ pointerEvents: "none" }}
+      >
+        <source src="/images/hero.webm" type="video/webm" />
+        <source src="/images/hero.mp4" type="video/mp4" />
+      </video>
 
       <div className="absolute inset-0 z-[5] bg-black/40 md:bg-black/30" />
 
@@ -44,7 +51,7 @@ export default function Home({
             md:start-[clamp(1rem,4vw,3.5rem)]
           "
         >
-          <h1 className="text-white font-semibold leading-[0.95] tracking-[-0.08em]">
+          <h1 className="text-white font-semibold leading-[1.05] tracking-[-0.08em]">
             <div className="overflow-hidden">
               <div className="flex flex-wrap">
                 <div className="overflow-hidden me-[clamp(0.5rem,1.5vw,0.75rem)]">
@@ -101,7 +108,7 @@ export default function Home({
               {descLines.map((line, i) => (
                 <div key={i} className={`overflow-hidden ${i > 0 ? "-mt-1" : ""}`}>
                   <span
-                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.15] tracking-tight text-white"
+                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.2] tracking-tight text-white"
                     style={{ animationDelay: `${1.15 + i * 0.12}s` }}
                   >
                     {line}
@@ -114,7 +121,7 @@ export default function Home({
               {secLines.map((line, i) => (
                 <div key={i} className={`overflow-hidden ${i > 0 ? "-mt-1" : ""}`}>
                   <span
-                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.15] tracking-tight text-white/60"
+                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.2] tracking-tight text-white/60"
                     style={{
                       animationDelay: `${1.15 + (descLines.length + i) * 0.12}s`,
                     }}
