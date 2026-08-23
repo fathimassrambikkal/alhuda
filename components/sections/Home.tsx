@@ -87,7 +87,7 @@ export default function Home({
           </h1>
         </div>
 
-        {/* Right Middle Description - FIXED: moved up on smaller screens */}
+        {/* Right Middle Description */}
         <div
           className="
             absolute
@@ -108,7 +108,7 @@ export default function Home({
               {descLines.map((line, i) => (
                 <div key={i} className={`overflow-hidden ${i > 0 ? "-mt-1" : ""}`}>
                   <span
-                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.2] tracking-tight text-white"
+                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.4] tracking-tight text-white"
                     style={{ animationDelay: `${1.15 + i * 0.12}s` }}
                   >
                     {line}
@@ -121,7 +121,7 @@ export default function Home({
               {secLines.map((line, i) => (
                 <div key={i} className={`overflow-hidden ${i > 0 ? "-mt-1" : ""}`}>
                   <span
-                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.2] tracking-tight text-white/60"
+                    className="hero-line block text-[clamp(0.95rem,3.5vw,1.125rem)] font-semibold leading-[1.4] tracking-tight text-white/60"
                     style={{
                       animationDelay: `${1.15 + (descLines.length + i) * 0.12}s`,
                     }}

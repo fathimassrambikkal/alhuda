@@ -6,7 +6,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowIcon } from "@/components/icons/Icons";
 import en from "@/locales/en.json";
-import type { Locale } from "@/i18n/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,10 +13,8 @@ type AboutTranslations = typeof en.about;
 
 export default function About({
   translations,
-  locale,
 }: {
   translations: AboutTranslations;
-  locale: Locale;
 }) {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -54,13 +51,19 @@ export default function About({
     >
       <div className="max-w-[1700px] mx-auto px-4 sm:px-6 md:px-10 lg:px-14 xl:px-16 2xl:px-20">
 
+        {/* ===========================
+            LARGE EDITORIAL HEADING
+            — mobile/tablet: no indent, flush left, starts from start
+            — desktop (lg+): unchanged, first line keeps its indent
+        ============================ */}
+
         <div className="max-w-[1650px] mx-auto">
           <h2
             ref={headingRef}
             className="
               font-light
               tracking-[-0.065em]
-              leading-[1.05]
+              leading-[1.1]
               text-[clamp(2rem,6vw,6.2rem)]
             "
           >
@@ -79,7 +82,19 @@ export default function About({
           </h2>
         </div>
 
+        {/* ===========================
+            DIVIDER
+        ============================ */}
+
         <div className="mt-14 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-28 border-t border-white/15" />
+
+        {/* ===========================
+            CONTENT
+            — below lg: always a row (never stacks), left column
+              widened so "Qatar's trusted rubber" fits on one line,
+              right column capped so it doesn't crowd the left, top-aligned
+            — lg+: unchanged, original 1fr / 420px layout
+        ============================ */}
 
         <div
           className="
@@ -94,19 +109,23 @@ export default function About({
             lg:grid-cols-[1fr_420px]
           "
         >
+
+          {/* LEFT — Now with self-start and width constraint */}
+
           <div className="self-start">
             <p
               className="
                 text-white
                 text-[clamp(0.9rem,1.2vw,1.25rem)]
-                leading-[1.1]
-                font-medium
+                leading-[1.1] font-medium
                 lg:whitespace-nowrap
               "
             >
               {translations.label}
             </p>
           </div>
+
+          {/* RIGHT — Now with self-start to align top */}
 
           <div className="self-start max-w-[180px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[380px] xl:max-w-[420px] 2xl:max-w-[460px]">
             <p
@@ -131,9 +150,8 @@ export default function About({
             >
               {translations.paragraph2}
             </p>
-
             <Link
-              href={`/${locale}/about`}
+              href="/about"
               className="
                 group
                 inline-flex
@@ -154,6 +172,7 @@ export default function About({
               <ArrowIcon className="w-[1em] h-[1em]" />
             </Link>
           </div>
+
         </div>
       </div>
     </section>
