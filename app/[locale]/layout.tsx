@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import Providers from "@/components/Providers";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
+import OrganizationJsonLd from "@/components/seo/OrganizationJsonLd";
 import {
   locales,
   isValidLocale,
@@ -24,6 +25,24 @@ interface LocaleLayoutProps {
   }>;
 }
 
+export async function generateMetadata({
+  params,
+}: LocaleLayoutProps): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+
+  if (!isValidLocale(rawLocale)) {
+    return {};
+  }
+
+  const locale: Locale = rawLocale;
+
+  return {
+    openGraph: {
+      locale: locale === "ar" ? "ar_QA" : "en_QA",
+    },
+  };
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -39,11 +58,10 @@ export default async function LocaleLayout({
 
   return (
     <div lang={locale} dir={dir}>
+      <OrganizationJsonLd />
       <Providers>
         <Navbar />
-
         <main>{children}</main>
-
         <Footer locale={locale} />
       </Providers>
     </div>

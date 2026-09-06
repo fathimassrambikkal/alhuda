@@ -83,7 +83,7 @@ export default function Footer({ locale }: FooterProps) {
       {/* =========================
           BOTTOM INFORMATION
       ========================== */}
-      <div className="relative z-10 w-full px-6 pb-8 pt-6 text-center sm:px-10">
+      <div className="relative z-10 w-full px-6 pb-8 pt-4 text-center sm:px-10">
         {/* Divider */}
         <div className="mx-auto mb-6 h-px w-12 bg-white/15" />
 
@@ -131,12 +131,13 @@ export default function Footer({ locale }: FooterProps) {
         {/* Copyright */}
         <p
           className="
-            text-[11px]
-            font-normal
-            tracking-[0.16em]
-            text-white/70
-            sm:text-xs
-            md:text-[13px]
+        
+    text-[11px]
+    font-normal
+    tracking-[0.16em]
+    text-white/70
+    sm:text-xs
+    md:text-[13px]
           "
         >
           © {currentYear} Alhuda — {t.footer.allRightsReserved}

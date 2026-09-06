@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import ProductHero from "@/components/sections/ProductHero";
 import ProductImageSlider from "@/components/sections/ProductImageSlider";
 import GetToKnowUs from "@/components/sections/GetToKnowUs";
@@ -5,24 +7,81 @@ import GetToKnowUs from "@/components/sections/GetToKnowUs";
 import { getTranslations } from "@/i18n/getTranslations";
 import type { Locale } from "@/i18n/config";
 
+interface ProductsPageProps {
+  params: Promise<{ locale: Locale }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProductsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  const isArabic = locale === "ar";
+
+  const title = isArabic
+    ? "منتجات وحلول المطاط | الهدى للمطاط"
+    : "Rubber Products & Solutions | Alhuda for Rubber";
+
+  const description = isArabic
+    ? "استكشف منتجات الهدى للمطاط في قطر، بما في ذلك السيور الناقلة المطاطية، الأرضيات المطاطية، البلاط المطاطي الباليستي، أرضيات الصالات الرياضية، المسارات الرياضية الخارجية، الإكسسوارات البحرية ومستلزمات مواقف السيارات واللفائف المطاطية."
+    : "Explore Alhuda for Rubber products in Qatar, including rubber conveyor belts, rubber flooring, ballistic rubber tiles, gym flooring, outdoor sports tracks, marine accessories, parking accessories, printing press rolls, and industrial rubber rolls.";
+
+  return {
+    title,
+    description,
+
+    alternates: {
+      canonical: `https://alhudaqa.com/${locale}/products`,
+      languages: {
+        en: "https://alhudaqa.com/en/products",
+        ar: "https://alhudaqa.com/ar/products",
+      },
+    },
+
+    openGraph: {
+      title,
+      description,
+      url: `https://alhudaqa.com/${locale}/products`,
+      locale: isArabic ? "ar_QA" : "en_QA",
+      type: "website",
+      siteName: "Alhuda for Rubber",
+      images: [
+        {
+          url: "/images/og-image-products.jpg",
+          width: 1200,
+          height: 630,
+          alt: isArabic
+            ? "منتجات الهدى للمطاط"
+            : "Alhuda for Rubber Products",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/og-image-products.jpg"],
+    },
+  };
+}
+
 export default async function ProductsPage({
   params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}) {
+}: ProductsPageProps) {
   const { locale } = await params;
 
   const translations = await getTranslations(locale);
 
   return (
-    <main className="bg-black text-white">
+    <div className="bg-black text-white">
       {/* ==================================================
           PRODUCTS HERO — ONLY ONCE
       ================================================== */}
       <ProductHero
-  translations={translations.productHero}
-  locale={locale}
-/>
+        translations={translations.productHero}
+        locale={locale}
+      />
 
       {/* ==================================================
           01 — RUBBER CONVEYOR BELT
@@ -320,6 +379,6 @@ export default async function ProductsPage({
         text={translations.getToKnowUs.text}
         href={`/${locale}/contact`}
       />
-    </main>
+    </div>
   );
 }

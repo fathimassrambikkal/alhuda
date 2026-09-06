@@ -63,28 +63,31 @@ export default function About({
         ============================ */}
 
         <div className="max-w-[1650px] mx-auto">
-          <h2
-            ref={headingRef}
-            className="
-              font-light
-              tracking-[-0.065em]
-              leading-[1.1]
-              text-[clamp(2rem,6vw,6.2rem)]
-            "
-          >
-            {translations.heading.map((line, index) => (
-              <div
-                key={index}
-                className={`overflow-hidden ${
-                  index === 0 ? "lg:pl-[10%]" : ""
-                }`}
-              >
-                <div className="reveal-line">
-                  {line}
-                </div>
-              </div>
-            ))}
-          </h2>
+<h2
+  ref={headingRef}
+  className="
+    font-light
+    tracking-[-0.065em]
+    leading-[1.1]
+    text-[clamp(2rem,6vw,6.2rem)]
+    lg:text-[clamp(3rem,4.3vw,6.5rem)]
+  "
+>
+  {translations.heading.map((line, index) => (
+    <div
+      key={index}
+      className={`overflow-hidden ${
+        index === 0
+          ? "lg:pl-[8%] xl:pl-[10%] 2xl:pl-[12%]"
+          : ""
+      }`}
+    >
+      <div className="reveal-line lg:whitespace-nowrap">
+        {line}
+      </div>
+    </div>
+  ))}
+</h2>
         </div>
 
         {/* ===========================

@@ -47,7 +47,7 @@ export default function ContactPage({
         "
       >
         <div className="mx-auto max-w-[1700px]">
-          <h2
+          <h1
             ref={headingRef}
             className="
               font-light
@@ -73,7 +73,7 @@ export default function ContactPage({
                 </div>
               </div>
             ))}
-          </h2>
+          </h1>
 
           <div className="relative mt-20 aspect-[16/9] w-full overflow-hidden sm:mt-28 lg:mt-36">
             <Image
