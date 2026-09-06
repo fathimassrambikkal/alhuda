@@ -150,10 +150,10 @@ export default function IntroPrinciples({
                 w-full
                 font-light
                 tracking-[-0.065em]
-                leading-[0.98]
-                sm:leading-[0.96]
-                md:leading-[0.94]
-                lg:leading-[0.92]
+                leading-[1.08]
+                sm:leading-[1.06]
+                md:leading-[1.04]
+                lg:leading-[1.02]
                 text-[clamp(2rem,6vw,6.2rem)]
                 ${isArabic ? "text-right" : "text-left"}
               `}
