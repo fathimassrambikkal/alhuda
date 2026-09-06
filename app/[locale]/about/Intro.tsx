@@ -11,13 +11,9 @@ type PrinciplesTranslations = typeof en.principles;
 
 export default function IntroPrinciples({
   translations,
-  lang = "en",
 }: {
   translations: PrinciplesTranslations;
-  lang?: "en" | "ar";
 }) {
-  const isArabic = lang === "ar";
-
   const headingRef = useRef<HTMLHeadingElement>(null);
   const principlesRef = useRef<HTMLDivElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
@@ -145,8 +141,7 @@ export default function IntroPrinciples({
           <div className="mx-auto w-full">
             <h2
               ref={headingRef}
-              dir={isArabic ? "rtl" : "ltr"}
-              className={`
+              className="
                 w-full
                 font-light
                 tracking-[-0.065em]
@@ -155,8 +150,8 @@ export default function IntroPrinciples({
                 md:leading-[1.04]
                 lg:leading-[1.02]
                 text-[clamp(2rem,6vw,6.2rem)]
-                ${isArabic ? "text-right" : "text-left"}
-              `}
+                text-start
+              "
             >
               {translations.intro.map((line: string, index: number) => (
                 <div
@@ -164,13 +159,7 @@ export default function IntroPrinciples({
                   className={`
                     overflow-hidden
                     w-full
-                    ${
-                      index === 0
-                        ? isArabic
-                          ? "lg:pr-[10%]"
-                          : "lg:pl-[10%]"
-                        : ""
-                    }
+                    ${index === 0 ? "lg:ps-[10%]" : ""}
                   `}
                 >
                   <div
@@ -197,19 +186,17 @@ export default function IntroPrinciples({
       {/* ==================================================
           PRINCIPLES SECTION
           ================================================== */}
-    {/* Principles Section - Flex Layout */}
       <section className="bg-white text-black pt-10 md:pt-16 pb-20 md:pb-32">
-        <div className=" mx-auto px-5 sm:px-8 lg:px-12 ">
+        <div className="mx-auto px-5 sm:px-8 lg:px-12">
           <div>
             <div
               ref={principlesRef}
-              dir={isArabic ? "rtl" : "ltr"}
               className="flex justify-between items-start gap-8"
             >
               {/* Left */}
               <div className="principles-heading shrink-0 w-[28%]">
                 <p
-                  className={`
+                  className="
                     text-[22px]
                     sm:text-[26px]
                     md:text-[34px]
@@ -218,8 +205,8 @@ export default function IntroPrinciples({
                     min-[800px]:leading-[0.95]
                     tracking-[-0.04em]
                     font-light
-                    ${isArabic ? "text-right" : "text-left"}
-                  `}
+                    text-start
+                  "
                 >
                   {translations.title.map((line, index) => (
                     <span key={index} className="block">
@@ -275,12 +262,10 @@ export default function IntroPrinciples({
 
                 <div
                   ref={descriptionRef}
-                  className={`mt-10 sm:mt-14 md:mt-20 principles-description max-w-[650px] ${
-                    isArabic ? "md:mr-24" : "md:ml-24"
-                  }`}
+                  className="mt-10 sm:mt-14 md:mt-20 principles-description max-w-[650px] md:ms-24"
                 >
                   <p
-                    className={`
+                    className="
                       text-[18px]
                       sm:text-[22px]
                       md:text-[30px]
@@ -289,8 +274,8 @@ export default function IntroPrinciples({
                       min-[800px]:leading-[1.05]
                       tracking-[-0.04em]
                       font-light
-                      ${isArabic ? "text-right" : "text-left"}
-                    `}
+                      text-start
+                    "
                   >
                     {translations.description}
                   </p>
