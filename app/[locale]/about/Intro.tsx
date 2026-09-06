@@ -140,7 +140,7 @@ export default function IntroPrinciples({
       {/* ==================================================
           INTRO SECTION
           ================================================== */}
-      <section className="bg-white text-black py-24 sm:py-28 md:py-32 lg:py-40 xl:py-44">
+      <section className="bg-white text-black pt-32 pb-24 sm:pt-36 sm:pb-28 md:pt-32 md:pb-32 lg:py-40 xl:py-44">
         <div className="mx-auto w-full px-4 min-[400px]:px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
           <div className="mx-auto w-full">
             <h2

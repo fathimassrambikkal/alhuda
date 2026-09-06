@@ -74,14 +74,14 @@ export default function Navbar() {
           "backdrop-blur-[26px] backdrop-saturate-150 shadow-[0_12px_50px_rgba(0,0,0,0.35)]",
           "transition-[height,width] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
           "w-[360px] max-w-[calc(100vw-20px)]",
-          open ? "h-[min(720px,calc(100vh-20px))]" : "h-[118px]",
+          open ? "h-[min(680px,calc(100vh-20px))]" : "h-[108px]",
           "md:max-w-[360px]",
           "max-md:start-[8px] max-md:top-[8px] max-md:w-[78vw] max-md:max-w-[calc(100vw-16px)]",
-          open ? "max-md:h-[min(570px,calc(100vh-16px))]" : "max-md:h-[102px]",
+          open ? "max-md:h-[min(550px,calc(100vh-16px))]" : "max-md:h-[94px]",
           "max-sm:w-[76vw] max-sm:max-w-[calc(100vw-16px)]",
-          open ? "max-sm:h-[min(500px,calc(100vh-16px))]" : "max-sm:h-[92px]",
+          open ? "max-sm:h-[min(480px,calc(100vh-16px))]" : "max-sm:h-[86px]",
           "max-[320px]:w-[83vw] max-[320px]:max-w-[calc(100vw-16px)]",
-          open ? "max-[320px]:h-[min(450px,calc(100vh-16px))]" : "max-[320px]:h-[82px]",
+          open ? "max-[320px]:h-[min(430px,calc(100vh-16px))]" : "max-[320px]:h-[78px]",
           "min-[1400px]:start-[20px] min-[1400px]:top-[20px] min-[1400px]:w-[360px]",
           "min-[2560px]:start-[40px] min-[2560px]:top-[40px] min-[2560px]:w-[360px]"
         )}
@@ -150,10 +150,10 @@ export default function Navbar() {
           id="mobile-menu-panel"
           inert={!open ? true : undefined}
           className={cx(
-            "absolute inset-x-0 bottom-0 top-[118px] flex flex-col px-[25px] pb-[22px] transition-opacity duration-500",
-            "max-md:top-[92px] max-md:px-[14px] max-md:pb-[13px]",
-            "max-sm:top-[84px] max-sm:px-[10px] max-sm:pb-[10px]",
-            "max-[320px]:top-[74px] max-[320px]:px-[8px] max-[320px]:pb-[8px]",
+            "absolute inset-x-0 bottom-0 top-[108px] flex flex-col px-[25px] pb-[22px] transition-opacity duration-500",
+            "max-md:top-[94px] max-md:px-[14px] max-md:pb-[13px]",
+            "max-sm:top-[86px] max-sm:px-[10px] max-sm:pb-[10px]",
+            "max-[320px]:top-[78px] max-[320px]:px-[8px] max-[320px]:pb-[8px]",
             open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           )}
         >
