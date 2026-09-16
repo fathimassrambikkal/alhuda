@@ -3,25 +3,42 @@ export default function OrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
 
-    "@id": "https://alhudaqa.com/#organization",
+    "@id": "https://www.alhudaqa.com/#organization",
 
     name: "Alhuda for Rubber",
+    alternateName: "الهدى للمطاط",
 
-    url: "https://alhudaqa.com",
+    url: "https://www.alhudaqa.com",
 
     logo: {
       "@type": "ImageObject",
-      url: "https://alhudaqa.com/images/logo.webp",
+      url: "https://www.alhudaqa.com/images/logo.webp",
     },
+
+    image: "https://www.alhudaqa.com/images/logo.webp",
 
     description:
       "Alhuda for Rubber provides high-quality rubber products, flooring, conveyor belts, sports surfaces, and customized rubber solutions in Qatar.",
 
-    email: "mailto:support@alhudaqa.com",
+    foundingDate: "1989",
 
-    telephone: [
-      "+974 3023 3304",
-      "+974 5569 3943",
+    email: "support@alhudaqa.com",
+
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+974-3023-3304",
+        contactType: "customer service",
+        areaServed: "QA",
+        availableLanguage: ["English", "Arabic"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+974-5569-3943",
+        contactType: "customer service",
+        areaServed: "QA",
+        availableLanguage: ["English", "Arabic"],
+      },
     ],
 
     address: {
@@ -35,6 +52,12 @@ export default function OrganizationJsonLd() {
       "@type": "Country",
       name: "Qatar",
     },
+
+    sameAs: [
+      "https://www.instagram.com/hichem.halaoui",
+      "https://www.facebook.com/share/19N7EFxmb7/",
+      "https://vt.tiktok.com/ZSXVxGTeh/",
+    ],
   };
 
   return (

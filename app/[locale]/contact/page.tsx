@@ -23,24 +23,36 @@ export async function generateMetadata({
     ? "تواصل مع الهدى للمطاط في الدوحة، قطر للاستفسار عن منتجات المطاط وتركيبها والحلول المطاطية المخصصة."
     : "Contact Alhuda for Rubber in Doha, Qatar for rubber product enquiries, installation services, and customized rubber solutions.";
 
+  const url = `https://www.alhudaqa.com/${locale}/contact`;
+
   return {
+    metadataBase: new URL("https://www.alhudaqa.com"),
+
     title,
     description,
 
     alternates: {
-      canonical: `https://alhudaqa.com/${locale}/contact`,
+      canonical: url,
+
       languages: {
-        en: "https://alhudaqa.com/en/contact",
-        ar: "https://alhudaqa.com/ar/contact",
+        en: "https://www.alhudaqa.com/en/contact",
+        ar: "https://www.alhudaqa.com/ar/contact",
+        "x-default": "https://www.alhudaqa.com/en/contact",
       },
     },
 
     openGraph: {
       title,
       description,
-      url: `https://alhudaqa.com/${locale}/contact`,
+      url,
       locale: isArabic ? "ar_QA" : "en_QA",
       type: "website",
+      siteName: isArabic ? "الهدى للمطاط" : "Alhuda for Rubber",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

@@ -27,24 +27,33 @@ export async function generateMetadata({
     ? "الهدى للمطاط تقدم منتجات وحلول تركيب المطاط عالية الجودة في قطر، بما في ذلك الأرضيات المطاطية والسيور الناقلة والأسطح الرياضية والحلول المطاطية المخصصة."
     : "Alhuda for Rubber provides premium rubber products and installation solutions in Qatar, including rubber flooring, conveyor belts, sports surfaces, and customized rubber solutions.";
 
+  const url = `https://www.alhudaqa.com/${locale}`;
+
   return {
     title,
     description,
 
     alternates: {
-      canonical: `https://alhudaqa.com/${locale}`,
+      canonical: url,
       languages: {
-        en: "https://alhudaqa.com/en",
-        ar: "https://alhudaqa.com/ar",
+        en: "https://www.alhudaqa.com/en",
+        ar: "https://www.alhudaqa.com/ar",
+        "x-default": "https://www.alhudaqa.com/en",
       },
     },
 
     openGraph: {
       title,
       description,
-      url: `https://alhudaqa.com/${locale}`,
+      url,
       locale: isArabic ? "ar_QA" : "en_QA",
       type: "website",
+      siteName: isArabic ? "الهدى للمطاط" : "Alhuda for Rubber",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

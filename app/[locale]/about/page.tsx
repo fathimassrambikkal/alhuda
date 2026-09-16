@@ -24,24 +24,36 @@ export async function generateMetadata({
     ? "تعرف على الهدى للمطاط وخبرتنا في منتجات وحلول المطاط وتركيبها في قطر، مع التركيز على الجودة والحرفية والحلول المخصصة."
     : "Learn about Alhuda for Rubber, our experience in rubber products and installation, and our commitment to quality, craftsmanship, and customized solutions in Qatar.";
 
+  const url = `https://www.alhudaqa.com/${locale}/about`;
+
   return {
+    metadataBase: new URL("https://www.alhudaqa.com"),
+
     title,
     description,
 
     alternates: {
-      canonical: `https://alhudaqa.com/${locale}/about`,
+      canonical: url,
+
       languages: {
-        en: "https://alhudaqa.com/en/about",
-        ar: "https://alhudaqa.com/ar/about",
+        en: "https://www.alhudaqa.com/en/about",
+        ar: "https://www.alhudaqa.com/ar/about",
+        "x-default": "https://www.alhudaqa.com/en/about",
       },
     },
 
     openGraph: {
       title,
       description,
-      url: `https://alhudaqa.com/${locale}/about`,
+      url,
       locale: isArabic ? "ar_QA" : "en_QA",
       type: "website",
+      siteName: isArabic ? "الهدى للمطاط" : "Alhuda for Rubber",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

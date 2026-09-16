@@ -35,10 +35,43 @@ export async function generateMetadata({
   }
 
   const locale: Locale = rawLocale;
+  const isArabic = locale === "ar";
+
+  const title = isArabic
+    ? "منتجات وحلول المطاط في قطر | الهدى للمطاط"
+    : "Rubber Products & Solutions in Qatar | Alhuda for Rubber";
+
+  const description = isArabic
+    ? "الهدى للمطاط تقدم منتجات وحلول المطاط في قطر، بما في ذلك الأرضيات المطاطية، البلاط المطاطي، السيور الناقلة، الأسطح الرياضية والحلول المطاطية المخصصة."
+    : "Alhuda for Rubber provides high-quality rubber products, rubber flooring, rubber tiles, conveyor belts, sports surfaces, and customized rubber solutions in Qatar.";
+
+  const url = `https://www.alhudaqa.com/${locale}/`;
 
   return {
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+      languages: {
+        en: "https://www.alhudaqa.com/en/",
+        ar: "https://www.alhudaqa.com/ar/",
+        "x-default": "https://www.alhudaqa.com/en/",
+      },
+    },
+
     openGraph: {
-      locale: locale === "ar" ? "ar_QA" : "en_QA",
+      type: "website",
+      locale: isArabic ? "ar_QA" : "en_QA",
+      url,
+      siteName: "Alhuda for Rubber",
+      title,
+      description,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

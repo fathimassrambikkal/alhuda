@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alhudaqa.com"),
+  metadataBase: new URL("https://www.alhudaqa.com"),
 
   title: {
     default: "Alhuda for Rubber | Rubber Products & Solutions in Qatar",

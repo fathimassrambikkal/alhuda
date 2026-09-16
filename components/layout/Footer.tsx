@@ -140,7 +140,7 @@ export default function Footer({ locale }: FooterProps) {
     md:text-[13px]
           "
         >
-          © {currentYear} Alhuda — {t.footer.allRightsReserved}
+     © {currentYear} {locale === "ar" ? "الهدى" : "Alhuda"} — {t.footer.allRightsReserved}
         </p>
       </div>
     </footer>

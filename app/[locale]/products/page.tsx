@@ -26,25 +26,33 @@ export async function generateMetadata({
     ? "استكشف منتجات الهدى للمطاط في قطر، بما في ذلك السيور الناقلة المطاطية، الأرضيات المطاطية، البلاط المطاطي الباليستي، أرضيات الصالات الرياضية، المسارات الرياضية الخارجية، الإكسسوارات البحرية ومستلزمات مواقف السيارات واللفائف المطاطية."
     : "Explore Alhuda for Rubber products in Qatar, including rubber conveyor belts, rubber flooring, ballistic rubber tiles, gym flooring, outdoor sports tracks, marine accessories, parking accessories, printing press rolls, and industrial rubber rolls.";
 
+  const url = `https://www.alhudaqa.com/${locale}/products`;
+
   return {
+    metadataBase: new URL("https://www.alhudaqa.com"),
+
     title,
     description,
 
     alternates: {
-      canonical: `https://alhudaqa.com/${locale}/products`,
+      canonical: url,
+
       languages: {
-        en: "https://alhudaqa.com/en/products",
-        ar: "https://alhudaqa.com/ar/products",
+        en: "https://www.alhudaqa.com/en/products",
+        ar: "https://www.alhudaqa.com/ar/products",
+        "x-default": "https://www.alhudaqa.com/en/products",
       },
     },
 
     openGraph: {
       title,
       description,
-      url: `https://alhudaqa.com/${locale}/products`,
+      url,
       locale: isArabic ? "ar_QA" : "en_QA",
+      alternateLocale: isArabic ? "en_QA" : "ar_QA",
       type: "website",
-      siteName: "Alhuda for Rubber",
+      siteName: isArabic ? "الهدى للمطاط" : "Alhuda for Rubber",
+
       images: [
         {
           url: "/images/og-image-products.jpg",
@@ -62,6 +70,11 @@ export async function generateMetadata({
       title,
       description,
       images: ["/images/og-image-products.jpg"],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
