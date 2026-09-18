@@ -8,7 +8,12 @@ export default function OrganizationJsonLd() {
     name: "Alhuda for Rubber",
     alternateName: "الهدى للمطاط",
 
-    url: "https://www.alhudaqa.com",
+    url: "https://www.alhudaqa.com/en/",
+
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.alhudaqa.com/en/",
+    },
 
     logo: {
       "@type": "ImageObject",
@@ -54,6 +59,7 @@ export default function OrganizationJsonLd() {
     },
 
     sameAs: [
+      // Only keep these if they are official Alhuda profiles
       "https://www.instagram.com/hichem.halaoui",
       "https://www.facebook.com/share/19N7EFxmb7/",
       "https://vt.tiktok.com/ZSXVxGTeh/",
